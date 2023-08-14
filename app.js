@@ -9,6 +9,6 @@ import connection from "./database/databaseApp.js";
 
 app.use('', route)
 
-app.listen(3000, ()=>{
+app.listen("https://nattyjojo.github.io/Football-Statistics-App-/", ()=>{
     console.log("listening on port: 3000")
 })
