@@ -1,0 +1,82 @@
+/* 
+font-family: 'Barlow', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+
+body{
+    background-color: #010a0f;
+    color: aliceblue;
+}
+
+
+.header_wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 1rem;
+    font-family: 'Barlow', sans-serif;
+    align-items: center;
+    background-color: #001e28;
+    padding: 2rem;
+    border-radius: 50%;
+    
+    
+}
+
+.left-nav a{
+    color: yellow;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+   
+}
+.left-nav a:hover{
+    
+    color: rgb(92, 92, 49);
+}
+.left-nav :nth-child(2){
+    margin: 0 1rem;
+}
+.search{
+    background-color: #010a0f;
+}
+.search-btn{
+    color: yellow;
+    background-color: #010a0f;
+    margin-left: 1rem;
+}
+
+footer{
+    text-align: center;
+    color: aliceblue;
+}
+footer a{
+    text-decoration: none;
+}
+.tableWrapper{
+    display: flex;
+    justify-content: center;
+   
+    
+}
+.mainHead{
+    display: inline-block;
+    font-size: medium;
+    padding: .5rem;
+    border-radius: .7rem;
+
+}
+.mainHead:hover{
+    border: 1px solid gray;
+    
+
+   
+
+}
+.tableRow :nth-child(1){
+    color: red;
+
+}
+/* tbody tr td {
+    border: 1px solid  grey;
+} */
+/* https://cdn.wallpapersafari.com/2/85/naozFg.jpg */  

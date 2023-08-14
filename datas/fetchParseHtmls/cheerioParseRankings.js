@@ -1,37 +1,73 @@
 
 import Cheerio from "cheerio";
+import connection from "../../database/databaseApp.js";
+import ranking_schema from "../../database/schemas/rankingschema.js";
 
-const cheerionParseRanking = async(html) => {
+
+const cheerioParseRanking = async(html) => {
     const $ = Cheerio.load(html);
     const rankingsMain = $('main .row')
     const header_one = $(rankingsMain).find('h1').text()
     const ranking_titles = $(rankingsMain).find('.row')
 
-    // wonder kid div
-    const wonderKid = $(ranking_titles[0])
-    const wonder_kid_img = $(wonderKid).find('.row .col-md-4 img').attr('src')
-    const wonder_kid_title = $(wonderKid).find('.row .col-md-4:nth-child(1)').text()
-    const wonder_kid_info_uri = 'https://fifastatic.fifaindex.com' + $(wonderKid).find('.row .col-md-4 .btn').attr('href')
+
+    const all_rows = $(rankingsMain).find(".row")
+    // Top Players in FIFA 22 Career Mode
+
+    const row_one = $(all_rows[0]).find('div')
+    for(let i = 0; i < row_one.length; i++){
+        const img = $(row_one[i]).find('img').attr('src')
+        const info = 'https://www.fifaindex.com'+$(row_one[i]).find('a').attr('href')
+        const title = $(row_one[i]).find('a').text()
+        await connection()
+        await ranking_schema.create({
+            img: img,
+            info: info,
+            tittle: title
+
+        })
 
 
-    // hidden gems
-    const hidden_gems = $(ranking_titles[1])
-    const hidden_gems_img = $(hidden_gems).find('.row .col-md-4 img').attr('src')
-    const hidden_gems_title = $(hidden_gems).find('.row .col-md-4:nth-child(1)').text()
-    const hidden_gems_info_uri = 'https://fifastatic.fifaindex.com' + $(hidden_gems).find('.row .col-md-4 .btn').attr('href')
 
-    console.log(hidden_gems_img)
-    console.log(hidden_gems_title)
-    console.log(hidden_gems_info_uri)
+    }
+    // Top Premier League Players in FIFA 22 Career Mode
+    const row_two = $(all_rows[1]).find('div')
+    for(let i = 0; i < row_two.length; i++){
+        const img = $(row_two[i]).find('img').attr('src')
+        const info = 'https://www.fifaindex.com'+$(row_two[i]).find('a').attr('href')
+        const title = $(row_two[i]).find('a').text()
+
+        await connection()
+        await ranking_schema.create({
+            img: img,
+            info: info,
+            tittle: title
+
+        })
+
+    }
+    //Top Bundesliga League Players in FIFA 22 Career Mode
+    const row_three = $(all_rows[2]).find('div')
+    for(let i = 0; i < row_three.length; i++){
+        const img = $(row_three[i]).find('img').attr('src')
+        const info = 'https://www.fifaindex.com'+$(row_three[i]).find('a').attr('href')
+        const title = $(row_three[i]).find('a').text()
+
+        await connection()
+        await ranking_schema.create({
+            img: img,
+            info: info,
+            tittle: title
+
+        })
+
+    }
+
     
-    // for(let i = 0; i < ranking_titles.length; i++){
 
-      
-    // //    console.log(title_link)
-
-    // }
-  
     
 
-}//  col-md-4 featured   main .row .row .col-md-4
-export default cheerionParseRanking
+}
+export default cheerioParseRanking
+
+

@@ -6,10 +6,9 @@ import teamsUri from "./pages/teamsPages.js";
 const rankings_url = ['https://www.fifaindex.com/rankings/'];
 
 const getData = async() => {
-    //await getPages(players_pages)
-    //await getPages(topPLayersUri)
-    //await getPages(teamsUri, 'teams')
-    //await getPages(rankings_url, 'rankings')
+    await getPages(players_pages, "player")
+    await getPages(topPLayersUri, "topPlayers")
+    await getPages(teamsUri, 'teams')
     await getPages(rankings_url, 'rankings')
 
 }

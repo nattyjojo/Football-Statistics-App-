@@ -1,0 +1,57 @@
+<br>
+<br>
+<main class="tableWrapper">
+   <section>
+    <h1 class="mainHead">Top 100</h1>
+    <h2 class="mainHead">All</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+          
+                <th>
+                    <span>OVR</span>
+                    <span>POT</span>
+                </th>
+              
+                <th>Name</th>
+                <th>Preferred Positions</th>
+          
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <% for(let i = 0; i < player.length; i++){ %>
+                <tr>
+                    <td><a href="<%= player[i].info %> "><img src="<%= player[i].img %>" width="40px" alt="<%= player[i].name %>"></a></td>
+                    <td><img src="<%= player[i].country_flag %> " alt=""></td>
+                    <td>
+                        <span style=" border-radius: 3px; margin-left: 5px; padding:2px;background-color:<%= colors(player[i].ovr)%>;"><%= player[i].ovr %></span>
+                        <span style=" border-radius: 3px; margin-left: 18px; padding:2px;background-color:<%= colors(player[i].pot)%>;"><%= player[i].pot %></span>
+
+                   </td>
+                    <!-- <td><%= player[i].pot %></td> -->
+                    <td><%= player[i].name %></td>
+                    <td>
+                        <span style="border-radius: 3px; margin-left: 18px; padding:2px; background-color:<%= colors(player[i].prefered_position_one)%>;"><%= player[i].prefered_position_one%></span>
+                        <% if(player[i].prefered_position_two !== "null"){%>
+                            <span style="border-radius: 3px; margin-left: 18px; padding:2px; background-color:<%= colors(player[i].prefered_position_two)%>;"><%= player[i].prefered_position_two%></span>
+                           
+
+                            <%} %>
+                        <% if(player[i].prefered_position_three !== "null"){%>
+                            <span style="border-radius: 3px; margin-left: 18px; padding:2px; background-color:<%= colors(player[i].prefered_position_three)%>;"><%= player[i].prefered_position_three%></span>
+                            
+
+                            <%} %>
+                    </td>
+                    <td><i><%= player[i].age%></i></td>
+                    <td><img src="<%= player[i].club_img%>" width="30px" alt=""></td>
+                </tr>
+           <% } %>
+        </tbody>	
+    </table>
+   </section>
+</main>
