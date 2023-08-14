@@ -9,7 +9,7 @@
     "dev": "nodemon 'datas/fetchParseApp.js'",
     "connect": "nodemon './database/databaseApp.js'",
     "app": "nodemon 'app.js'",
-    "home": "nodemon '/home/jojo/becode/personal-projects/Football-Statistics-App-/app/routes/middleWares/homeRouteMiddleware.js'"
+    "scrap": "nodemon '/home/jojo/becode/personal-projects/Football-Statistics-App-/datas/fetchParseApp.js'"
   },
   "author": "",
   "license": "ISC",

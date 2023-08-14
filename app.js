@@ -9,6 +9,6 @@ import connection from "./database/databaseApp.js";
 
 app.use('', route)
 
-app.listen("https://johnchimezie.online/", ()=>{
+app.listen(()=>{
     console.log("listening on port: 3000")
 })
