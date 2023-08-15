@@ -2,8 +2,7 @@
   "name": "football-statistics-app-",
   "version": "1.0.0",
   "description": "A full-stack web application using Express, EJS, CSS, and MongoDB Atlas. The application will serve as a football statistics app that stores information about football player profiles.",
-  "main": "fetchParseApp.js",
-  "type": "module",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon 'datas/fetchParseApp.js'",
@@ -23,4 +22,5 @@
     "nodemon": "^3.0.1",
     "npm": "^9.8.1"
   }
+ 
 }

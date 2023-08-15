@@ -1,6 +1,6 @@
-import express from "express";
-import homeRouteMiddleware from "./routes/middleWares/homeRouteMiddleware.js";
-import colors from "./globals/colors.js";
+const express = require("express");
+const homeRouteMiddleware = require("./routes/middleWares/homeRouteMiddleware.js");
+const colors =  require("./globals/colors.js");
 
 
 const route = express.Router()
@@ -16,11 +16,9 @@ route.get('/home', async (req, res) => {
       console.error(err)
    }
    
-   
   
    
 
 }) 
 
-
-export default route
+module.exports = route

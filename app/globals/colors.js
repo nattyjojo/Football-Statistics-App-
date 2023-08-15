@@ -20,7 +20,7 @@ const colors = (value) => {
             color = "#f6bb43"
             break;
         case value === "GK":
-            color = "#e9573e"
+            color = "# e9573e"
             break;
         default:
             color = "#239454"
@@ -28,4 +28,4 @@ const colors = (value) => {
     }
     return color
 }
-export default colors
+module.exports = colors

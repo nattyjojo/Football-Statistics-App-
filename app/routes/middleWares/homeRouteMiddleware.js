@@ -1,5 +1,5 @@
-import connection from "../../../database/databaseApp.js"
-import player from "../../../database/schemas/playersSchema.js";
+const connection = require("../../../database/databaseApp.js");
+const player = require("../../../database/schemas/playersSchema.js");
 
 
 const homeRouteMiddleware = async () => {
@@ -13,4 +13,4 @@ const homeRouteMiddleware = async () => {
         console.error(err)
     }
 }
-export default homeRouteMiddleware
+module.exports = homeRouteMiddleware
