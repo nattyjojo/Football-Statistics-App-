@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config()
 
-const URI = process.env.URI
+
 
 const connection = async(state) => {
+     const URI = process.env.URI
     if(state === "disconnnect"){
         const disconnect = await mongoose.disconnect()
         console.log("disconnected")

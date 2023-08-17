@@ -3,9 +3,10 @@ const player = require("../../../database/schemas/playersSchema.js");
 
 
 const homeRouteMiddleware = async () => {
+    console.log("yess")
     try{
         await connection()
-        const players = player.find().limit(30);
+        const players = await player.find().limit(30);
         
         return players
 

@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 
 app.use('', route)
 
-app.listen(3000, (err)=>{
+app.listen((err)=>{
     if(err){
         console.error(err)
     }

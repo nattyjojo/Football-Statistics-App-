@@ -4,29 +4,31 @@ font-family: 'Poppins', sans-serif; */
 
 
 body{
-    background-color: #010a0f;
-    color: aliceblue;
+    background-color: #010A0F;
+    color: #FFFFFF;
+    position: relative;
 }
 
 
 .header_wrapper{
     display: flex;
     justify-content: space-between;
-    margin: 3rem 1rem;
     font-family: 'Barlow', sans-serif;
     align-items: center;
-    background-color: #001e28;
-    padding: 2rem;
-    border-radius: 50%;
+    background-color: #0F2D37;
+    position: fixed;  
+    min-width: 94vw;
+    padding: 1vw 3vw;
+    top: 0;
     
-    
+
 }
 
 .left-nav a{
-    color: yellow;
     text-decoration: none;
     display: inline-block;
     font-size: 1.5rem;
+    color: inherit;
    
 }
 .left-nav a:hover{
@@ -37,17 +39,24 @@ body{
     margin: 0 1rem;
 }
 .search{
-    background-color: #010a0f;
+    
 }
 .search-btn{
-    color: yellow;
-    background-color: #010a0f;
+    /* color: yellow; */
+    /* background-color: #010a0f; */
     margin-left: 1rem;
+    border-radius: .2rem;
 }
 
 footer{
-    text-align: center;
     color: aliceblue;
+    position: fixed;
+    bottom: 0;
+    font-family: 'Barlow', sans-serif;
+    background-color: #0F2D37;
+    min-width: 100vw;
+    text-align: center;
+    height: 2rem;
 }
 footer a{
     text-decoration: none;
@@ -55,6 +64,7 @@ footer a{
 .tableWrapper{
     display: flex;
     justify-content: center;
+    margin-top: 3.5rem;
    
     
 }
@@ -80,3 +90,7 @@ footer a{
     border: 1px solid  grey;
 } */
 /* https://cdn.wallpapersafari.com/2/85/naozFg.jpg */  
+
+
+
+

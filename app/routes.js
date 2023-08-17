@@ -10,7 +10,8 @@ route.get('/home', async (req, res) => {
    try{
       const players_data = await homeRouteMiddleware()
       //console.log(players_data)
-      res.render('partial', {player: players_data,colors})
+    
+      res.render('johnchimezie.online', {player: players_data, colors})
       
    }catch (err){
       console.error(err)
@@ -22,3 +23,8 @@ route.get('/home', async (req, res) => {
 }) 
 
 module.exports = route
+
+
+
+
+

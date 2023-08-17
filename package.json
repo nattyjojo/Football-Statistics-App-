@@ -4,7 +4,6 @@
   "description": "A full-stack web application using Express, EJS, CSS, and MongoDB Atlas. The application will serve as a football statistics app that stores information about football player profiles.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon 'datas/fetchParseApp.js'",
     "connect": "nodemon './database/databaseApp.js'",
     "app": "nodemon 'app.js'",

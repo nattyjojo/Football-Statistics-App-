@@ -2,7 +2,7 @@ const colors = (value) => {
     let color = '';
     switch(true){
         case value >= 90:
-            color = "#239454"
+            color = "#14dc4b"
             break;
         case value < 90 && value > 70:
             color = "#8dc153"
@@ -20,7 +20,7 @@ const colors = (value) => {
             color = "#f6bb43"
             break;
         case value === "GK":
-            color = "# e9573e"
+            color = "#e9573e"
             break;
         default:
             color = "#239454"
